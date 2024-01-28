@@ -1,1 +1,1 @@
-# wallstreetbets-portfolio
+# r/wallstreetbets Auto Trader
