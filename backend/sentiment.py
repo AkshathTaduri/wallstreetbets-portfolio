@@ -1,7 +1,8 @@
+import os
 from openai import OpenAI
-from config import openai_api_key
 
-client = OpenAI(openai_api_key)
+key = os.getenv("openai_api_key")
+client = OpenAI(key)
 
 import re
 

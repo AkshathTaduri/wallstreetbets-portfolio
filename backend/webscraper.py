@@ -1,14 +1,15 @@
+import os
 import praw
 import pandas as pd
 import re
 import json
 
-user_agent = "wallstreet by /u/Idunno171"
-reddit_authorized = praw.Reddit(client_id="xVFsZXp0M6JlSLDUXq1epQ",
-                                    client_secret="NXpYN4U28kM1_N5l8LP95gR1tysr-A",
-                                    user_agent=user_agent,
-                                    username="Idunno171",
-                                    password="Bubbles123!")
+
+reddit_authorized = praw.Reddit(os.getenv("r_client_id"),
+                                    os.getenv("r_client_secret"),
+                                    os.getenv("r_user_agent"),
+                                    os.getenv("r_username"),
+                                    os.getenv("r_password"))
 
 name_subreddit = "wallstreetbets"
 subreddit = reddit_authorized.subreddit(name_subreddit)
